@@ -5,7 +5,7 @@ import { CoinContext } from './coindataContext'
 
 
 
-const DisplayComponent = ()=> {
+const UIContextCard = ()=> {
 
       const { coindata, setCoinData} =useContext(CoinContext)
       console.log('-----displaycompt',coindata)
@@ -36,4 +36,4 @@ const DisplayComponent = ()=> {
 }
 
 
-export default DisplayComponent
+export default UIContextCard

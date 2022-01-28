@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import DisplayDataComponent  from './redux-ground/displayComp'
+import UIReduxCard  from './redux-ground/displayComp'
 import { CoinProvider } from './context-ground/coindataContext'
-import DisplayComponent from './context-ground/displayComponent'
+import UIContextCard from './context-ground/ui-context'
 
 import './App.css';
 
@@ -10,10 +10,10 @@ function App() {
     <div className="App">
        Hello Syed 
       <CoinProvider >
-         <DisplayComponent/>
+         <UIContextCard />
       </CoinProvider>
       <br/>
-      <DisplayDataComponent />
+      <UIReduxCard />
 
     </div>
   );

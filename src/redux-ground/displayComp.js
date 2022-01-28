@@ -28,7 +28,7 @@ const FetchData = (obj) => {
 
 
 
-const DisplayDataComponent = (props) => {
+const UIReduxCard = (props) => {
 
       console.log('-----DisplayDatCompProps', props)
 
@@ -66,7 +66,7 @@ const mapDisPatchToProp = (dispatch) => {
 
 
 // Connect is a HOC function 
-export default connect (mapStateToProps, mapDisPatchToProp) (DisplayDataComponent)
+export default connect (mapStateToProps, mapDisPatchToProp) (UIReduxCard)
 
 // const saveDataActionCreateor = (data) => {
 //       return { type : 'SAVE_DATA' , payload : data}
