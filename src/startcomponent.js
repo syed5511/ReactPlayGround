@@ -5,7 +5,6 @@ import axios from 'axios';
 const DisplayCard = () => {
 
       const [ coindata, setCoinData ] = useState({})
-
       const { code, rate} = coindata
 
       // console.log('----coindata',coindata)
@@ -40,8 +39,8 @@ const DisplayCard = () => {
       return(
 
             <>
-             <div> Content USD { code }</div>
-             <div> Rate  { rate }</div>
+             <div style={{ border : '1px solid black'}}> Content USD { code }</div>
+             <div style={{ border : '1px solid Red' , height : '50px' , textAlign : 'center' , paddingTop : '20px'}}> Rate  { rate }</div>
             </>
       )
 }
