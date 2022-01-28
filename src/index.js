@@ -13,7 +13,7 @@ const initialState = {
   college: 'Lsbu'
 }
 
-const reducer1 = ( state = initialState, action) => {
+const reducer = ( state = initialState, action) => {
   console.log('---STRING',action)
   if(action.type === 'SAVE_DATA') {
 
@@ -26,23 +26,9 @@ const reducer1 = ( state = initialState, action) => {
   return state
 }
 
-
-
-const reducer2 = ( state = initialState, action) => {
-  console.log('---STRING',action)
-  if(action.type === 'SAVE_DATA') {
-
-    return {
-      ...state,
-      coinDataRedux : action.payload
-      
-    }
-  }
-  return state
-}
 
 // const store = createStore(combineReducers({reducer1,reducer2}), applyMiddleware(reduxthunk));
-const store = createStore(reducer1);
+const store = createStore(reducer);
 
 
 

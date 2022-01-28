@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import DisplayData  from './displayComp'
+import DisplayDataComponent  from './redux-ground/displayComp'
 import { CoinProvider } from './context-ground/coindataContext'
 import DisplayComponent from './context-ground/displayComponent'
 
@@ -13,7 +13,7 @@ function App() {
          <DisplayComponent/>
       </CoinProvider>
       <br/>
-      <DisplayData />
+      <DisplayDataComponent />
 
     </div>
   );

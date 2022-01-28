@@ -28,9 +28,9 @@ const FetchData = (obj) => {
 
 
 
-const DisplayData = (props) => {
+const DisplayDataComponent = (props) => {
 
-      console.log('-----DisplayDatProps', props)
+      console.log('-----DisplayDatCompProps', props)
 
       useEffect( ()=> {
 
@@ -41,12 +41,14 @@ const DisplayData = (props) => {
 
       return (
 
-             <div> Display Data </div>
+             <div> Display Data component redux </div>
       )
 
 } 
 
 const mapStateToProps = (state) => {
+
+      console.log('----12345',state)
 
 return state
 
@@ -55,13 +57,16 @@ return state
 const mapDisPatchToProp = (dispatch) => {
 
       return {
+            dummyData : ()=> {dispatch({})},
             saveData : (data)=>{dispatch({ type : 'SAVE_DATA' , payload : data})},
             fetchData : (data)=>{dispatch({ type : 'FETCH_DATA' , payload : data})}
       }
 
 }
 
-export default connect (mapStateToProps, mapDisPatchToProp) (DisplayData)
+
+// Connect is a HOC function 
+export default connect (mapStateToProps, mapDisPatchToProp) (DisplayDataComponent)
 
 // const saveDataActionCreateor = (data) => {
 //       return { type : 'SAVE_DATA' , payload : data}
